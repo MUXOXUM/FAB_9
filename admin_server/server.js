@@ -1,10 +1,4 @@
-require('dotenv').config({ path: '.env' });
-const adminPort = parseInt(process.env.ADMIN_PORT, 10);
-
-if (isNaN(adminPort)) {
-    console.error("ADMIN_PORT должен быть числом. Проверьте ваш .env файл.");
-    process.exit(1); // Завершаем процесс с ошибкой
-}
+const adminPort = 1481;
 
 const express = require('express');
 const path = require('path');

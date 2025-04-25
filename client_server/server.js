@@ -1,10 +1,4 @@
-require('dotenv').config({ path: '.env' });
-const clientPort = parseInt(process.env.CLIENT_PORT, 10);
-
-if (isNaN(clientPort)) {
-    console.error("CLIENT_PORT должен быть числом. Проверьте ваш .env файл.");
-    process.exit(1); // Завершаем процесс с ошибкой
-}
+const clientPort = 1482;
 
 const express = require('express');
 const path = require('path');

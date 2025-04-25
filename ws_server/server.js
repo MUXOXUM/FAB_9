@@ -1,10 +1,4 @@
-require('dotenv').config({ path: '.env' });
-const websocketPort = parseInt(process.env.WEBSOCKET_PORT, 10);
-
-if (isNaN(websocketPort)) {
-    console.error("WEBSOCKET_PORT должен быть числом. Проверьте ваш .env файл.");
-    process.exit(1); // Завершаем процесс с ошибкой
-}
+const websocketPort = 1483;
 
 const WebSocket = require("ws");
 const wss = new WebSocket.Server({ port: websocketPort });
