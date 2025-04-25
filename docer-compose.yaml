@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  admin_server:
+    build:
+      context: ./admin_server
+    ports:
+      - "1481:1481"
+    volumes:
+      - ./frontend
+      - ./products.json
+    restart: always
+
+  client_server:
+    build:
+      context: ./client_server
+    ports:
+      - "1482:1482"
+    volumes:
+      - ./frontend
+      - ./products.json
+    restart: always
+
+  ws_server:
+    build:
+      context: ./ws_server
+    ports:
+      - "1483:1483"
+    restart: always

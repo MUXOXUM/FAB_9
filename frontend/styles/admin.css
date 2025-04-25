@@ -1,0 +1,46 @@
+body {
+    background-color: #2f4037;
+    color: #ffffff;
+}
+
+.container {
+    background-color: #38614e;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+h1,
+h3 {
+    text-align: center;
+    color: #b6d79e;
+}
+
+.table {
+    background-color: #4a6559;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: #5c7d67;
+    color: #b6d79e;
+}
+
+.table tbody tr:hover {
+    background-color: #6e8d77;
+}
+
+.btn-success {
+    background-color: #4caf50;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}

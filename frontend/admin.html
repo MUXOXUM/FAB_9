@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Панель администратора - Покупка котов</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/admin.css">
+    <link rel="stylesheet" href="/styles/support_window.css">
+
+</head>
+<body class="p-5">
+    <div class="container">
+        <h1 class="text-center mb-4">Панель администратора - Покупка котов</h1>
+
+        <!-- Форма добавления кота -->
+        <h3>Добавить кота</h3>
+        <form id="addProductForm" class="mb-4">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <input type="text" id="name" class="form-control" placeholder="Имя кота" required>
+                </div>
+                <div class="col-md-2">
+                    <input type="number" id="price" class="form-control" placeholder="Цена" required>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="description" class="form-control" placeholder="Описание" required>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="categories" class="form-control" placeholder="Порода (через запятую)" required>
+                </div>
+                <div class="col-md-1">
+                    <button type="submit" class="btn btn-success w-100">Добавить</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Таблица котов -->
+        <h3>Список котов</h3>
+        <table class="table table-bordered">
+            <thead class="table-light">
+                <tr>
+                    <th>ID</th>
+                    <th>Имя кота</th>
+                    <th>Цена</th>
+                    <th>Описание</th>
+                    <th>Порода</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody id="productTableBody"></tbody>
+        </table>
+    </div>
+
+    <!-- Кнопка для открытия чата -->
+    <button id="chat-button" data-user-id="admin_1" data-recipient-id="customer_1">💬</button>
+
+    <!-- Окно чата -->
+    <div id="chat-container">
+        <div id="chat-header">Чат с клиентом <span id="close-chat" style="float:right; cursor:pointer;">❌</span></div>
+        <div id="chat-messages"></div>
+        <div id="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Введите сообщение...">
+            <button id="chat-send">➤</button>
+        </div>
+    </div>
+
+    <script src="/scripts/admin_table.js"></script>
+    <script src="/scripts/support_window.js"></script>
+
+</body>
+</html>

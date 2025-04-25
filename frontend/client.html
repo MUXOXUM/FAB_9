@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог котов</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/client.css">
+    <link rel="stylesheet" href="/styles/support_window.css">
+
+</head>
+<body class="p-5">
+    <div class="container">
+        <h1 class="text-center mb-4">Каталог котов</h1>
+
+        <!-- Блок кнопок категорий -->
+        <div id="categories" class="mb-4 text-center"></div>
+
+        <!-- Блок карточек товаров -->
+        <div id="products" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+    </div>
+
+    <!-- Кнопка для открытия чата -->
+    <button id="chat-button" data-user-id="customer_1" data-recipient-id="admin_1">💬</button>
+
+    <!-- Окно чата -->
+    <div id="chat-container">
+        <div id="chat-header">Поддержка <span id="close-chat" style="float:right; cursor:pointer;">❌</span></div>
+        <div id="chat-messages"></div>
+        <div id="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Введите сообщение...">
+            <button id="chat-send">➤</button>
+        </div>
+    </div>
+
+    <script src="/scripts/client_table.js"></script>
+    <script src="/scripts/support_window.js"></script>
+
+</body>
+</html>
