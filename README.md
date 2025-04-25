@@ -3,7 +3,7 @@
 ### 1. Клонируем проект
 
 ```bash
-git clone https://github.com/Alpha-x-prog/task9.git
+https://github.com/MUXOXUM/FAB_9.git
 ```
 
 ### 2. Запускаем Docker
