@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '../.env' });
+require('dotenv').config({ path: '.env' });
 const adminPort = parseInt(process.env.ADMIN_PORT, 10);
 
 if (isNaN(adminPort)) {
@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../frontend')));
 
-const filePath = path.join(__dirname, '../products.json');
+const filePath = path.join(__dirname, '../data/products.json');
 
 // Получить все товары
 app.get('/api/products', (req, res) => {

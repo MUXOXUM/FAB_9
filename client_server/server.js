@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '../.env' });
+require('dotenv').config({ path: '.env' });
 const clientPort = parseInt(process.env.CLIENT_PORT, 10);
 
 if (isNaN(clientPort)) {
@@ -30,7 +30,7 @@ const schema = buildSchema(`
 `);
 
 const readProductsData = () => {
-    return JSON.parse(fs.readFileSync(path.join(__dirname, '../products.json'), 'utf-8'));
+    return JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
 };
 
 const root = {

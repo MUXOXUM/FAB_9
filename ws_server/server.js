@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '../.env' });
+require('dotenv').config({ path: '.env' });
 const websocketPort = parseInt(process.env.WEBSOCKET_PORT, 10);
 
 if (isNaN(websocketPort)) {

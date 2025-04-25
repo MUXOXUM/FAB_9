@@ -1,4 +1,5 @@
-version: "3.9"
+version: '3.8'
+
 services:
   admin_server:
     build:
@@ -6,8 +7,8 @@ services:
     ports:
       - "1481:1481"
     volumes:
-      - ./frontend
-      - ./products.json
+      - ./frontend:/frontend
+      - ./data:/data
     restart: always
 
   client_server:
@@ -16,8 +17,8 @@ services:
     ports:
       - "1482:1482"
     volumes:
-      - ./frontend
-      - ./products.json
+      - ./frontend:/frontend
+      - ./data:/data
     restart: always
 
   ws_server:
